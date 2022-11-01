@@ -4,8 +4,8 @@ import java.util.*;
 
 public class Todos {
     private final int MAX_TASKS = 7;
-    private final List<String> taskList = new ArrayList<>();
-    private final Stack<Task> taskStack = new Stack<>();
+    private final Set<String> taskList = new TreeSet<>();
+    private final Deque<Task> taskStack = new ArrayDeque<>();
 
     public void addTask(String task) {
         if (taskList.size() < MAX_TASKS) {
@@ -36,7 +36,6 @@ public class Todos {
     }
 
     public String getAllTasks() {
-        Collections.sort(taskList);
         return String.join(" ", taskList);
     }
 }

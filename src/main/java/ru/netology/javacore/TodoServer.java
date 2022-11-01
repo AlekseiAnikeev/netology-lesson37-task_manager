@@ -47,7 +47,7 @@ public class TodoServer {
                             System.out.println("Сервер остановлен!");
                         }
                     }
-                    out.println("Список ваших задач: " + todos.getAllTasks());
+                    out.println(todos.getAllTasks());
                 }
             }
         } catch (IOException e) {
